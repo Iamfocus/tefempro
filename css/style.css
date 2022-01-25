@@ -529,11 +529,11 @@ h3{
 
     .logo {
         display: none;
+        margin-left: 10px;
     }
 
     .mLogo {
         display: block;
-        margin-left: 10px;
     }
 
     .headerFounder {
