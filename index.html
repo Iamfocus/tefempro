@@ -41,7 +41,35 @@
 </div>
 
 <section id="myNavbar">
-  
+  <nav class="navbar mb-4 fixed-top navbar-expand-lg navbar-dark indigo mb-4">
+      <img class="logo" src="images/tefemlogo1.png" width="150">
+      <span onclick="openNav()">
+        <span class="" style="font-size:30px; cursor:pointer; margin-left: 20px; color:black;" onclick="openNav()">&#9776;</span>
+      </span>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+     
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link scroll" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="scroll nav-link" href="#secondIndex">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll" href="#fourthIndex">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll" href="">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link donate scroll" href="#footer">Donate</a>
+          </li>
+        </ul>
+     
+      
+    </div>
+  </nav>
 </section>
 
 <span onclick="openNav()">
@@ -521,23 +549,6 @@
 
   </script>
 
-
-
- <!-- GetButton.io widget -->
-<script type="text/javascript">
-  (function () {
-      var options = {
-          whatsapp: "+2348068183761", // WhatsApp number
-          call_to_action: "Message us", // Call to action
-          position: "right", // Position may be 'right' or 'left'
-      };
-      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-  })();
-</script>
-<!-- /GetButton.io widget -->
 </body>
 
 </html>
