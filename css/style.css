@@ -70,7 +70,7 @@ body {
 }
 
 .logo {
-    
+  
 }
 
 .navbar-brand {
@@ -388,19 +388,18 @@ h3{
 
 
 /* Mobile View */
-
 @media screen and (max-width: 600px) {
+
     body {
 
-    overflow-x: hidden;
-}
+        overflow-x: hidden;
+    }
     .navbar {
-        background: #2d2b2b !important;
+        
       }
 
     .navbar-brand {
-        color: white !important;
-        margin-left: 10px;
+    
       }
 
       .firstHeader {
@@ -533,12 +532,12 @@ h3{
     }
 
     .logo {
-        display: none;
+
+        margin-left: 10px;
     }
 
     .mLogo {
-        display: block;
-        margin-left: 10px;
+        
     }
 
     .headerFounder {
