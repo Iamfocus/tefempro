@@ -1,0 +1,585 @@
+body {
+
+    overflow-x: hidden;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: #2d2b2b; /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+}
+
+/* The navBar */
+.navbar {
+  background-color: #fff !important;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+    margin-left: 80px;
+}
+
+.navbar-brand {
+  color: black !important;
+  margin-left: 100px;
+}
+
+ul li a{
+  margin-left: 12px;
+  margin-right: 12px;
+  color: black !important;
+}
+
+.donate {
+    background-color: black;
+    color:white !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+.navbar-toggler {
+    color: black !important;
+}
+
+
+
+.firstHeader {
+    margin-top: 150px;
+    margin-left: 100px;
+    font-size: 56px;
+}
+
+.firstParagraph {
+    width: 60%;
+    margin-left: 100px;
+}
+
+.firstButton {
+    border-style: none;
+    padding: 10px;
+    background: #2d2b2b;
+    color: white;
+    font-size: 10px;
+    border-radius: 3px;
+    margin-left: 100px;
+}
+
+.secondButton {
+    border-style: none;
+    padding: 10px;
+    background: none;
+    color: black;
+    font-size: 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.firstButton .secondButton {
+    display: inline-block;
+}
+
+
+
+.firstImage {
+    /* Full height */
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+
+#secondIndex {
+    background: #2d2b2b;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.secondImage {
+    margin-left: 100px;
+}
+
+.secondHeader {
+    color: #ffeeef;
+    font-size: 64px;
+    margin-top: 50px;
+}
+
+.secondParagraph {
+    color: white;
+    width: 60%;
+    font-size: 18px;
+}
+
+.thirdParagraph {
+    color: white;
+    width: 90%;
+    font-size: 15px;
+    margin-left: 20px;
+    display: none;
+}
+
+.thirdButton {
+    border-style: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #ffeeef;
+    color: #2d2b2b;
+    font-size: 10px;
+    border-radius: 3px;
+}
+
+.fourthButton {
+    border-style: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #2d2b2b;
+    color: #ffeeef;
+    font-size: 10px;
+    border-radius: 3px;
+    border-bottom: 1px solid #ffeeef;
+    border-right: 1px solid #ffeeef;
+    margin-left: 10px;
+}
+
+.thirdHeader {
+    color:#ffeeef;
+    font-size: 48px;
+    margin-left: 100px;
+    margin-top:50px;
+}
+
+.newRow {
+    margin-top:50px;
+}
+
+h3{
+    color: #ffeeef;
+}
+
+.textPara {
+    color: white;
+    font-size:13px;
+}
+
+#thirdIndex {
+    background-color: #ffeeef;
+    padding-bottom: 20px;
+    
+}
+
+.skillHeader {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 100px;
+    font-size: 48px;
+    color: #2d2b2b;
+}
+
+.skillParagraph {
+    font-size: 36px;
+    color: #2d2b2b;
+    margin-left:100px;
+}
+
+.fy {
+    color: red;
+    padding-right: 10px;
+}
+
+.keepHeader {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 100px;
+    font-size: 40px;
+    color: #2d2b2b;
+}
+
+
+
+.profile {
+    width: 100%;
+    height: 350px;
+}
+
+.percentage {
+    font-size: 30px;
+}
+
+.testimonials {
+    height: 350px;
+}
+
+.testimonyHeader {
+    margin-top: 120px !important;
+}
+
+.mr-2{
+    margin-top: 50px !important;
+    color: black !important;
+}
+
+.myImg {
+    border-radius: 50%;
+    width: 70%;
+    height: auto;
+}
+
+.headerFounder {
+    margin-top: 50px;
+    font-size: 40px;
+    color: white;
+}
+
+.mercyPara {
+    width: 80%;
+    margin-top: 22px;
+    color: white;
+}
+
+.fab {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#mercy {
+    background: #2d2b2b;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.team0 {
+    margin-top: 20px;
+}
+
+.team {
+    font-size: 20px;
+    color: white;
+}
+
+.team1 {
+    color: white;
+}
+
+.team2 {
+    margin-top: 20px;
+}
+
+.meet {
+    margin-left: 20px;
+    color: white;
+}
+
+#teamMembers {
+    background: #2d2b2b;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#footer {
+    background: #2d2b2b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+
+.mLogo {
+    display: none;
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+/* Mobile View */
+@media screen and (max-width: 450px) {
+    .navbar {
+        background: #2d2b2b !important;
+      }
+
+    .navbar-brand {
+        color: white !important;
+        margin-left: 10px;
+      }
+
+      .firstHeader {
+        margin-top: 80px;
+        width: 100%;
+        margin-left: 25px;
+        font-size: 40px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .firstImage {
+        margin-top: 80px;
+    }
+
+    .firstParagraph {
+        width: 100%;
+        margin-left: 25px;
+    }
+
+    .firstButton {
+        margin-left: 25px;
+    }
+
+    .secondImage {
+        margin-left: 25px;
+        width: 85%;
+        
+    }
+
+    .secondHeader {
+        color:white;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .secondParagraph {
+        color: white;
+        width: 90%;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .thirdButton {
+        border-style: none;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: #ffeeef;
+        color: #2d2b2b;
+        font-size: 10px;
+        border-radius: 3px;
+        margin-left: 20px;
+    }
+    
+    .thirdHeader {
+        color:#ffeeef;
+        font-size: 40x;
+        margin-left: 20px;
+        margin-top:50px;
+    }
+
+    h3{
+        color: #ffeeef;
+        margin-left:40px;
+    }
+    
+    .textPara {
+        color: white;
+        margin-left:40px;
+    }
+
+    .newRow {
+        display: none !important;
+    }
+
+    .thirdParagraph {
+        color: white;
+        width: 90%;
+        font-size: 15px;
+        margin-left: 20px;
+        display: block;
+    }
+
+    .skillParagraph {
+        font-size: 20px;
+        color: #2d2b2b;
+        margin-left:20px;
+    }
+
+    .skillHeader {
+        color: #2d2b2b;
+        padding-top: 20px;
+        margin-left: 20px;
+        font-size: 48px;
+    }
+
+    .keepHeader {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 20px;
+        font-size: 40px;
+        color: #2d2b2b;
+    }
+
+    .testimonyHeader {
+        margin-left: 10px !important;
+        font-size: 35px !important;
+        margin-top: 30px !important;
+    }
+
+    .testimonyPara {
+        margin-left: 10px !important;
+        font-size: 16px !important;
+        width: 100%;
+    }
+
+    .testimonyName {
+        margin-left: 10px !important;
+        font-size: 12px !important;
+    }
+
+    .testimonyCeo {
+        margin-left: 10px !important;
+        font-size: 12px !important;
+    }
+
+    .mr-2{
+        margin-top: 20px !important;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .mLogo {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .headerFounder {
+        margin-top: 10px;
+        font-size: 28px;
+    }
+    
+    .mercyPara {
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    #mercy {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .events {
+        margin-left: 20px !important;
+    }
+
+    .upcoming {
+        margin-left: 20px !important;
+    }
+
+    .footerLogo {
+        text-align: center;
+    }
+
+    .footerLogo {
+        display: none !important;
+    }
+
+    .f1 {
+        display: none !important;
+    }
+
+    #footer {
+        background: #2d2b2b;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .icona {
+        margin-top: 5px;
+        display: none !important;
+    }
+}
+
