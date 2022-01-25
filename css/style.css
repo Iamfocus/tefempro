@@ -389,7 +389,7 @@ h3{
 
 /* Mobile View */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
     body {
 
     overflow-x: hidden;
